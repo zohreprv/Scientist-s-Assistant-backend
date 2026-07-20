@@ -1,0 +1,19 @@
+{
+  "name": "scientists",
+  "version": "1.0.0",
+  "description": "It's a website to ease finding new papers of your favourite authors.",
+  "license": "MIT",
+  "author": "ZohrehParvandi",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --watch server.js ",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1"
+  }
+}
