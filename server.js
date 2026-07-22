@@ -85,6 +85,18 @@ app.get('/api/institutions', async (req, res) => {
     res.status(500).json(err.message);
   }
 });
+app.get('/api/countries', async (req, res) => {
+  const parsed = parse(req.url, false);
+  const url = 'https://api.openalex.org/countries' + '?' + parsed.query;
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    res.json(data);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).json(err.message);
+  }
+});
 app.listen(PORT, () => {
   console.log('Server is running on port: ', PORT);
 });
